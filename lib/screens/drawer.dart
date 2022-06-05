@@ -5,7 +5,6 @@ import 'package:sut_cepte_mobile_app/screens/animals.dart';
 import 'package:sut_cepte_mobile_app/screens/home.dart';
 import 'package:sut_cepte_mobile_app/screens/login.dart';
 import 'package:sut_cepte_mobile_app/screens/prices.dart';
-import 'package:sut_cepte_mobile_app/screens/start_page.dart';
 import 'package:sut_cepte_mobile_app/screens/stock.dart';
 
 FirebaseAuth _auth = FirebaseAuth.instance;
@@ -92,7 +91,7 @@ class DrawerMe extends StatelessWidget {
         onTap: () {},
         iconColor: Colors.green,
         leading: Icon(
-          Icons.settings,
+          Icons.water_drop,
           color: Colors.black,
         ),
         title: Text(
@@ -108,24 +107,11 @@ class DrawerMe extends StatelessWidget {
         },
         iconColor: Colors.orange[900],
         leading: Icon(
-          Icons.settings,
+          Icons.add_shopping_cart_rounded,
           color: Colors.black,
         ),
         title: Text(
           'Stok',
-          style: GoogleFonts.poppins(
-              color: Colors.black, fontWeight: FontWeight.bold),
-        ),
-      ),
-      ListTile(
-        onTap: () {},
-        iconColor: Colors.red[600],
-        leading: Icon(
-          Icons.settings,
-          color: Colors.black,
-        ),
-        title: Text(
-          'Sağlık',
           style: GoogleFonts.poppins(
               color: Colors.black, fontWeight: FontWeight.bold),
         ),
@@ -137,7 +123,7 @@ class DrawerMe extends StatelessWidget {
         },
         iconColor: Colors.pink,
         leading: Icon(
-          Icons.settings,
+          Icons.trending_up_rounded,
           color: Colors.black,
         ),
         title: Text(

@@ -55,50 +55,6 @@ class _StockState extends State<Stock> {
             SizedBox(
               height: 20.0,
             ),
-            Container(
-              width: double.infinity,
-              height: 50.0,
-              decoration: BoxDecoration(
-                color: Color(0x55d2d2d2),
-                borderRadius: BorderRadius.circular(30.0),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Expanded(
-                    child: TextField(
-                      decoration: InputDecoration(
-                        hintText: "Ara... ",
-                        border: InputBorder.none,
-                        contentPadding: EdgeInsets.only(left: 20.0),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: 50,
-                    height: double.infinity,
-                    child: OutlinedButton(
-                      onPressed: () {},
-                      child: Icon(
-                        Icons.search,
-                        color: Colors.white,
-                      ),
-                      style: OutlinedButton.styleFrom(
-                        backgroundColor: Colors.indigo,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(50),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 20.0,
-            ),
             Expanded(
               child: GridView.count(
                 crossAxisCount: 2,

@@ -1,7 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:sut_cepte_mobile_app/screens/home.dart';
-import 'package:sut_cepte_mobile_app/screens/login.dart';
 import 'package:sut_cepte_mobile_app/screens/start_page.dart';
 
 void main() async {
