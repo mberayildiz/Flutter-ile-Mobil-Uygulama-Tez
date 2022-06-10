@@ -1,5 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:sut_cepte_mobile_app/providers/maliyet_listeleme.dart';
+import 'package:sut_cepte_mobile_app/screens/counter.dart';
 import 'package:sut_cepte_mobile_app/screens/start_page.dart';
 
 void main() async {
@@ -27,10 +30,20 @@ class _MyAppState extends State<MyApp> {
           );
         }
         if (snapshot.hasData) {
-          return MaterialApp(
-            debugShowCheckedModeBanner: false,
-            title: 'Süt Cepte',
-            home: StartPage(),
+          return MultiProvider(
+            providers: [
+              ChangeNotifierProvider(
+                create: (context) => Counter(),
+              ),
+              ChangeNotifierProvider(
+                create: (context) => MalitetListelePoriver(),
+              ),
+            ],
+            child: MaterialApp(
+              debugShowCheckedModeBanner: false,
+              title: 'Süt Cepte',
+              home: StartPage(),
+            ),
           );
         }
         return CircularProgressIndicator();

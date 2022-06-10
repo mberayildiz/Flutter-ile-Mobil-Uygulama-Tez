@@ -19,6 +19,9 @@ class _AnimalsState extends State<Animals> {
     "https://w7.pngwing.com/pngs/1005/629/png-transparent-sheep-rove-goat-sheep-animals-cow-goat-family-sheep.png",
     "https://w7.pngwing.com/pngs/862/145/png-transparent-chicken-as-food-broiler-poultry-hen-chicken.png",
   ];
+  List<String> animAd = ["Sığır", "İnek", "Buzağı", "Koyun", "Keçi", "Tavuk"];
+  List<int> animAdet = [0, 0, 0, 0, 0, 0];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,12 +63,12 @@ class _AnimalsState extends State<Animals> {
                 crossAxisCount: 2,
                 childAspectRatio: 0.7,
                 children: [
-                  animalCard(imgUrl[0], "Sığır", "51"),
-                  animalCard(imgUrl[1], "İnek", "0"),
-                  animalCard(imgUrl[2], "Buzağı", "2"),
-                  animalCard(imgUrl[3], "Koyun", "40"),
-                  animalCard(imgUrl[4], "Keçi", "11"),
-                  animalCard(imgUrl[5], "Tavuk", "24"),
+                  animalCard(imgUrl[0], animAd[0], animAdet[0], context),
+                  animalCard(imgUrl[1], animAd[1], animAdet[1], context),
+                  animalCard(imgUrl[2], animAd[2], animAdet[2], context),
+                  animalCard(imgUrl[3], animAd[3], animAdet[3], context),
+                  animalCard(imgUrl[4], animAd[4], animAdet[4], context),
+                  animalCard(imgUrl[5], animAd[5], animAdet[5], context),
                 ],
               ),
             )

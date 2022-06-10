@@ -2,6 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
+import 'package:provider/provider.dart';
+import 'package:sut_cepte_mobile_app/screens/counter.dart';
 import 'package:sut_cepte_mobile_app/screens/home.dart';
 import 'package:sut_cepte_mobile_app/screens/login.dart';
 

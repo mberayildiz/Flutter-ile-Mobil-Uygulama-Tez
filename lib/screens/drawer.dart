@@ -2,8 +2,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sut_cepte_mobile_app/screens/animals.dart';
+import 'package:sut_cepte_mobile_app/screens/animals_page.dart';
 import 'package:sut_cepte_mobile_app/screens/home.dart';
 import 'package:sut_cepte_mobile_app/screens/login.dart';
+import 'package:sut_cepte_mobile_app/screens/maliyet.dart';
 import 'package:sut_cepte_mobile_app/screens/prices.dart';
 import 'package:sut_cepte_mobile_app/screens/stock.dart';
 
@@ -23,7 +25,9 @@ class DrawerMe extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                _auth.currentUser!.email.toString(),
+                _auth.currentUser != null
+                    ? _auth.currentUser!.email.toString()
+                    : "",
                 style: GoogleFonts.poppins(
                   color: Colors.black,
                   fontSize: 16.0,
@@ -88,14 +92,17 @@ class DrawerMe extends StatelessWidget {
         ),
       ),
       ListTile(
-        onTap: () {},
+        onTap: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => MaliyetHesapla()));
+        },
         iconColor: Colors.green,
         leading: Icon(
           Icons.water_drop,
           color: Colors.black,
         ),
         title: Text(
-          'Elde Edilen Süt',
+          'Maliyet Hesaplama',
           style: GoogleFonts.poppins(
               color: Colors.black, fontWeight: FontWeight.bold),
         ),
