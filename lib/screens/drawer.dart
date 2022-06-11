@@ -2,7 +2,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sut_cepte_mobile_app/screens/animals.dart';
-import 'package:sut_cepte_mobile_app/screens/animals_page.dart';
 import 'package:sut_cepte_mobile_app/screens/home.dart';
 import 'package:sut_cepte_mobile_app/screens/login.dart';
 import 'package:sut_cepte_mobile_app/screens/maliyet.dart';
@@ -64,18 +63,6 @@ class DrawerMe extends StatelessWidget {
         ),
       ),
       ListTile(
-        onTap: () {},
-        leading: Icon(
-          Icons.person,
-          color: Colors.black,
-        ),
-        title: Text(
-          "Profil",
-          style: GoogleFonts.poppins(
-              color: Colors.black, fontWeight: FontWeight.bold),
-        ),
-      ),
-      ListTile(
         onTap: () {
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => Animals()));
@@ -93,22 +80,6 @@ class DrawerMe extends StatelessWidget {
       ),
       ListTile(
         onTap: () {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => MaliyetHesapla()));
-        },
-        iconColor: Colors.green,
-        leading: Icon(
-          Icons.water_drop,
-          color: Colors.black,
-        ),
-        title: Text(
-          'Maliyet Hesaplama',
-          style: GoogleFonts.poppins(
-              color: Colors.black, fontWeight: FontWeight.bold),
-        ),
-      ),
-      ListTile(
-        onTap: () {
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => Stock()));
         },
@@ -119,6 +90,22 @@ class DrawerMe extends StatelessWidget {
         ),
         title: Text(
           'Stok',
+          style: GoogleFonts.poppins(
+              color: Colors.black, fontWeight: FontWeight.bold),
+        ),
+      ),
+      ListTile(
+        onTap: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => MaliyetHesapla()));
+        },
+        iconColor: Colors.green,
+        leading: Icon(
+          Icons.water_drop,
+          color: Colors.black,
+        ),
+        title: Text(
+          'Maliyet Hesaplama',
           style: GoogleFonts.poppins(
               color: Colors.black, fontWeight: FontWeight.bold),
         ),
@@ -145,18 +132,6 @@ class DrawerMe extends StatelessWidget {
       Divider(
         thickness: 0.5,
         color: Colors.grey,
-      ),
-      ListTile(
-        onTap: () {},
-        leading: Icon(
-          Icons.settings,
-          color: Colors.black,
-        ),
-        title: Text(
-          "Ayarlar",
-          style: GoogleFonts.poppins(
-              color: Colors.black, fontWeight: FontWeight.bold),
-        ),
       ),
       ListTile(
         onTap: () {

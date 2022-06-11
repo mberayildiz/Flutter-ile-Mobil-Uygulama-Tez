@@ -2,8 +2,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
-import 'package:provider/provider.dart';
-import 'package:sut_cepte_mobile_app/screens/counter.dart';
 import 'package:sut_cepte_mobile_app/screens/home.dart';
 import 'package:sut_cepte_mobile_app/screens/login.dart';
 
@@ -19,7 +17,6 @@ class _StartPageState extends State<StartPage> with TickerProviderStateMixin {
   final String _animaName = "assets/animationJson/milk.json";
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _animationController =
         AnimationController(vsync: this, duration: Duration(seconds: 4));
@@ -66,18 +63,15 @@ class _StartPageState extends State<StartPage> with TickerProviderStateMixin {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              FlutterLogo(
-                // Logo gelecek
-                size: 90,
-              ),
+              //logo
               SizedBox(
                 height: 20,
               ),
               Text(
-                'Süt Cepte',
+                'Süt Maliyeti Hesaplama',
                 style: GoogleFonts.poppins(
                   textStyle: TextStyle(
-                    fontSize: 30.0,
+                    fontSize: 20.0,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
@@ -86,7 +80,6 @@ class _StartPageState extends State<StartPage> with TickerProviderStateMixin {
               SizedBox(
                 height: 20,
               ),
-              // Animasyon Gelecek
               Lottie.asset(_animaName,
                   controller: _animationController,
                   height: 220, onLoaded: (composed) {

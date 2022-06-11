@@ -81,7 +81,12 @@ class _MaliyetHesaplaState extends State<MaliyetHesapla> {
           },
           child: Text(
             "Ekle",
-            style: TextStyle(fontSize: 18),
+            style: GoogleFonts.poppins(
+                textStyle: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Colors.indigo,
+              fontSize: 18,
+            )),
           )),
     );
   }
@@ -102,15 +107,30 @@ class _MaliyetHesaplaState extends State<MaliyetHesapla> {
         value: selectedValue,
         items: [
           DropdownMenuItem(
-            child: Text("Rasyon"),
+            child: Text(
+              "Rasyon",
+              style: GoogleFonts.poppins(
+                  textStyle: TextStyle(
+                      fontWeight: FontWeight.bold, color: Colors.black)),
+            ),
             value: "Rasyon",
           ),
           DropdownMenuItem(
-            child: Text("Gelirler"),
+            child: Text(
+              "Gelirler",
+              style: GoogleFonts.poppins(
+                  textStyle: TextStyle(
+                      fontWeight: FontWeight.bold, color: Colors.black)),
+            ),
             value: "Gelirler",
           ),
           DropdownMenuItem(
-            child: Text("Giderler"),
+            child: Text(
+              "Giderler",
+              style: GoogleFonts.poppins(
+                  textStyle: TextStyle(
+                      fontWeight: FontWeight.bold, color: Colors.black)),
+            ),
             value: "Giderler",
           ),
         ],
@@ -153,6 +173,7 @@ class _MaliyetHesaplaState extends State<MaliyetHesapla> {
                   : selectedValue == "Giderler"
                       ? "Gider Adı"
                       : "",
+          hintStyle: GoogleFonts.poppins(),
           fillColor: Colors.white,
           filled: true,
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(5))),
@@ -170,6 +191,7 @@ class _MaliyetHesaplaState extends State<MaliyetHesapla> {
         },
         decoration: InputDecoration(
             hintText: "Kilo",
+            hintStyle: GoogleFonts.poppins(),
             fillColor: Colors.white,
             filled: true,
             border: OutlineInputBorder(borderRadius: BorderRadius.circular(5))),
@@ -192,6 +214,7 @@ class _MaliyetHesaplaState extends State<MaliyetHesapla> {
                   : selectedValue == "Giderler"
                       ? "Gider Deger"
                       : "",
+          hintStyle: GoogleFonts.poppins(),
           fillColor: Colors.white,
           filled: true,
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(5))),

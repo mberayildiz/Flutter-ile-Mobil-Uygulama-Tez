@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:sut_cepte_mobile_app/model/maliyet_tip.dart';
 import 'package:sut_cepte_mobile_app/providers/maliyet_listeleme.dart';
@@ -31,7 +30,7 @@ class _MalitetListState extends State<MalitetList> {
           height: 200,
           child: _malitetProvider.getList().isNotEmpty
               ? ListView.builder(
-                padding: EdgeInsets.all(10),
+                  padding: EdgeInsets.all(10),
                   shrinkWrap: true,
                   itemCount: _malitetProvider.getList().length,
                   itemBuilder: (context, index) {
@@ -49,18 +48,21 @@ class _MalitetListState extends State<MalitetList> {
                             crossAxisAlignment: CrossAxisAlignment.end,
                             children: [
                               Text(
-                                maliyetModel.maliyerDeger.toString(),
+                                maliyetModel.maliyerDeger.toString() + " TL",
                                 style: TextStyle(fontSize: 18),
                               ),
-                            Text(
-                                maliyetModel.kg == null ? "":maliyetModel.kg.toString(),
+                              Text(
+                                maliyetModel.kg == null
+                                    ? ""
+                                    : maliyetModel.kg.toString() + " kg",
                                 style: TextStyle(fontSize: 18),
                               ),
                             ],
                           ),
                           title: Text(maliyetModel.maliyetName.toString()),
                           leading: CircleAvatar(
-                            backgroundColor: Colors.purple.shade100, // renk bu ha
+                            backgroundColor:
+                                Colors.indigo.shade100, // renk bu ha
                             child: Text((index + 1).toString()),
                           ),
                           subtitle: Text(maliyetModel.maliyetTipi.toString()),
@@ -70,7 +72,8 @@ class _MalitetListState extends State<MalitetList> {
                   })
               : Center(
                   child: Text(
-                  "Maliyet İşlemleri Ekleyin Listeye",
+                  "İşlemleri ekleyiniz",
+                  style: GoogleFonts.poppins(),
                 )),
         ),
       ),
