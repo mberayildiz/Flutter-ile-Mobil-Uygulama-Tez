@@ -12,12 +12,12 @@ class Stock extends StatefulWidget {
 
 class _StockState extends State<Stock> {
   List<String> imgUrl = [
-    "https://w7.pngwing.com/pngs/762/162/png-transparent-straw-straw-bales-isolated-agriculture-harvest-field-straw-role-thumbnail.png",
-    "https://cdn.dsmcdn.com/ty69/product/media/images/20210216/14/63315627/71786884/1/1_org_zoom.jpg",
-    "https://w7.pngwing.com/pngs/380/930/png-transparent-leaf-border-leaf-leaves-beach-food-branch.png",
-    "https://w7.pngwing.com/pngs/380/930/png-transparent-leaf-border-leaf-leaves-beach-food-branch.png",
-    "https://cdn.dsmcdn.com/ty69/product/media/images/20210216/14/63315627/71786884/1/1_org_zoom.jpg",
-    "https://cdn.dsmcdn.com/ty69/product/media/images/20210216/14/63315627/71786884/1/1_org_zoom.jpg",
+    "https://images.freeimages.com/images/large-previews/7d6/hay-pattern-1183771.jpg",
+    "https://www.ciftcitv.com/wp-content/uploads/2022/03/sigir-besi-yemi-1-jpg.jpg",
+    "https://www.atilimsilaj.com/upload/resimler/urun_7.jpg",
+    "http://www.tarimsalpazarlama.com/upload/vck/kuru-yonca.jpg",
+    "https://cdn.cimri.io/image/240x240/15-kg-tavuk-yumurta-yemi-pelet-yem-yuksek-verimli-yumurta-yemi_512916816.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_Lc3lDVLys63qE10s5aSp52HYVkDGNfJyOg&usqp=CAU",
   ];
   @override
   Widget build(BuildContext context) {
@@ -60,12 +60,12 @@ class _StockState extends State<Stock> {
                 crossAxisCount: 2,
                 childAspectRatio: 0.7,
                 children: [
-                  stockCard(imgUrl[0], "Saman", "33"),
-                  stockCard(imgUrl[1], "Kuru Yonca", "14"),
-                  stockCard(imgUrl[2], "Mısır Silajı", "22"),
-                  stockCard(imgUrl[3], "Yaprak", "411"),
-                  stockCard(imgUrl[4], "Yem", "110.4"),
-                  stockCard(imgUrl[5], "Yem", "9924.2"),
+                  stockCard(imgUrl[0], "Saman", "50"),
+                  stockCard(imgUrl[1], "Süt Yemi", "125"),
+                  stockCard(imgUrl[2], "Mısır Silajı", "67"),
+                  stockCard(imgUrl[3], "Yonca Kuru Otu", "350"),
+                  stockCard(imgUrl[4], "Düve Yemi", "0"),
+                  stockCard(imgUrl[5], "Sığır Besi Yemi", "0"),
                 ],
               ),
             )

@@ -33,52 +33,42 @@ class _PricesState extends State<Prices> {
       ),
       body: SingleChildScrollView(
         child: Container(
+          height: MediaQuery.of(context).size.height,
           color: Colors.white,
-          constraints: BoxConstraints(
-              maxHeight: MediaQuery.of(context).size.height,
-              maxWidth: MediaQuery.of(context).size.width),
-          child: SafeArea(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                SizedBox(
-                  height: 30.0,
-                ),
-                Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Text(
-                          style: GoogleFonts.poppins(
-                              textStyle: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black,
-                                  fontSize: 18.0)),
-                          "Yem Adı"),
-                      Text(
-                          style: GoogleFonts.poppins(
-                              textStyle: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black,
-                                  fontSize: 18.0)),
-                          "Birimi"),
-                      Text(
-                          style: GoogleFonts.poppins(
-                              textStyle: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black,
-                                  fontSize: 18.0)),
-                          "Fiyatı"),
-                    ]),
-                SizedBox(
-                  height: 20.0,
-                ),
-                yemApi.getData(),
-                Padding(
-                  padding: EdgeInsets.all(24.0),
-                ),
-              ],
-            ),
+          child: Column(
+           
+            children: [
+              SizedBox(
+                height: 30.0,
+              ),
+              Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+                Text(
+                    style: GoogleFonts.poppins(
+                        textStyle: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                            fontSize: 18.0)),
+                    "Yem Adı"),
+                Text(
+                    style: GoogleFonts.poppins(
+                        textStyle: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                            fontSize: 18.0)),
+                    "Birimi"),
+                Text(
+                    style: GoogleFonts.poppins(
+                        textStyle: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                            fontSize: 18.0)),
+                    "Fiyatı"),
+              ]),
+              SizedBox(
+                height: 20.0,
+              ),
+              yemApi.getData(),
+            ],
           ),
         ),
       ),

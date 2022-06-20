@@ -6,7 +6,7 @@ Widget stockCard(String img, String adi, String adet) {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image.network(
               img,

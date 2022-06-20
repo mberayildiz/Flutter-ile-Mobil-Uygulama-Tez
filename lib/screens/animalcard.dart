@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:sut_cepte_mobile_app/screens/counter.dart';
 
 Widget animalCard(String img, String adi, int adet, BuildContext context) {
-  Counter counter = Provider.of<Counter>(context);
-  adet = counter.counter.toInt();
+
   return Container(
     child: Card(
       elevation: 10,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image.network(
               img,
@@ -46,7 +43,6 @@ Widget animalCard(String img, String adi, int adet, BuildContext context) {
                 Expanded(
                   child: IconButton(
                     onPressed: () {
-                      counter.increment();
                     },
                     icon: Icon(
                       Icons.add,
@@ -57,9 +53,7 @@ Widget animalCard(String img, String adi, int adet, BuildContext context) {
                 Expanded(
                   child: IconButton(
                     onPressed: () {
-                      if (adet > 0) {
-                        counter.decrement();
-                      }
+                      
                     },
                     icon: Icon(
                       Icons.remove,

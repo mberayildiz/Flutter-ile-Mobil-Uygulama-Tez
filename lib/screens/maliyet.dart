@@ -32,7 +32,7 @@ class _MaliyetHesaplaState extends State<MaliyetHesapla> {
         ),
         backgroundColor: Colors.white,
         title: Text(
-          "Maliyet Hesaplama",
+          "Hesaplama",
           style: GoogleFonts.poppins(
               textStyle:
                   TextStyle(fontWeight: FontWeight.bold, color: Colors.indigo)),
@@ -40,20 +40,25 @@ class _MaliyetHesaplaState extends State<MaliyetHesapla> {
       ),
       body: SingleChildScrollView(
         child: Container(
-            child: Column(
-          children: [
-            const SizedBox(height: 30),
-            maliyetListeDownMetot(),
-            hesaplamaMetotu(),
-            const SizedBox(
-              width: 10,
-            ),
-            ekleButonuMetot(),
-            MalitetList(onDismissed: (index) {
-              _malitetListelePoriver.listRemove(index);
-            })
-          ],
-        )),
+          child: Column(
+            children: [
+              const SizedBox(height: 30),
+              maliyetListeDownMetot(),
+              hesaplamaMetotu(),
+              const SizedBox(
+                width: 10,
+              ),
+              ekleButonuMetot(),
+              MalitetList(onDismissed: (index) {
+                _malitetListelePoriver.listRemove(index);
+              }),
+              SizedBox(
+                height: 10,
+              ),
+              
+            ],
+          ),
+        ),
       ),
     );
   }
@@ -208,11 +213,11 @@ class _MaliyetHesaplaState extends State<MaliyetHesapla> {
       },
       decoration: InputDecoration(
           hintText: selectedValue == "Rasyon"
-              ? "Yem Deger"
+              ? "Yem Birim Fiyatı (TL)"
               : selectedValue == "Gelirler"
-                  ? "Gelir Deger"
+                  ? "Gelir Deger (TL)"
                   : selectedValue == "Giderler"
-                      ? "Gider Deger"
+                      ? "Gider Deger (TL)"
                       : "",
           hintStyle: GoogleFonts.poppins(),
           fillColor: Colors.white,

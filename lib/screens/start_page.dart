@@ -42,7 +42,7 @@ class _StartPageState extends State<StartPage> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.indigo,
+      backgroundColor: Color.fromARGB(255, 77, 85, 131),
       body: SingleChildScrollView(
         child: Container(
           alignment: Alignment.center,
@@ -64,6 +64,11 @@ class _StartPageState extends State<StartPage> with TickerProviderStateMixin {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               //logo
+              Container(
+                width: 200,
+                height: 150,
+                child: Image.asset("assets/images/haytek_logo.png"),
+              ),
               SizedBox(
                 height: 20,
               ),

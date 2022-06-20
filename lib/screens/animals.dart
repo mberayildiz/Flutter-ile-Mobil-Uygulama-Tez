@@ -12,15 +12,15 @@ class Animals extends StatefulWidget {
 
 class _AnimalsState extends State<Animals> {
   List<String> imgUrl = [
-    "https://e7.pngegg.com/pngimages/351/993/png-clipart-cow-cow.png",
-    "https://e7.pngegg.com/pngimages/351/883/png-clipart-cow-cow.png",
-    "https://w7.pngwing.com/pngs/445/56/png-transparent-dairy-cattle-calf-ox-bull-animal-oil-cow-goat-family-snout-ox.png",
-    "https://w7.pngwing.com/pngs/208/719/png-transparent-sheep-goat-sheep-image-file-formats-animals-cow-goat-family-thumbnail.png",
-    "https://w7.pngwing.com/pngs/1005/629/png-transparent-sheep-rove-goat-sheep-animals-cow-goat-family-sheep.png",
-    "https://w7.pngwing.com/pngs/862/145/png-transparent-chicken-as-food-broiler-poultry-hen-chicken.png",
+    "https://images.freeimages.com/images/large-previews/44a/cow-1575964.jpg",
+    "https://images.freeimages.com/images/large-previews/671/cow-1366498.jpg",
+    "https://images.freeimages.com/images/large-previews/058/calf-1391965.jpg",
+    "https://images.freeimages.com/images/large-previews/6ff/sheep-1409992.jpg",
+    "https://images.freeimages.com/images/large-previews/a49/goat-vs-goat-1373896.jpg",
+    "https://images.freeimages.com/images/large-previews/914/chicken-1374830.jpg",
   ];
   List<String> animAd = ["Sığır", "İnek", "Buzağı", "Koyun", "Keçi", "Tavuk"];
-  List<int> animAdet = [0, 0, 0, 0, 0, 0];
+  List<int> animAdet = [4, 6, 7, 1, 9, 11];
 
   @override
   Widget build(BuildContext context) {

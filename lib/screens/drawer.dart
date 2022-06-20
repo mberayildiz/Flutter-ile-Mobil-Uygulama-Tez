@@ -6,6 +6,7 @@ import 'package:sut_cepte_mobile_app/screens/home.dart';
 import 'package:sut_cepte_mobile_app/screens/login.dart';
 import 'package:sut_cepte_mobile_app/screens/maliyet.dart';
 import 'package:sut_cepte_mobile_app/screens/prices.dart';
+import 'package:sut_cepte_mobile_app/screens/rasyon.dart';
 import 'package:sut_cepte_mobile_app/screens/stock.dart';
 
 FirebaseAuth _auth = FirebaseAuth.instance;
@@ -101,11 +102,11 @@ class DrawerMe extends StatelessWidget {
         },
         iconColor: Colors.green,
         leading: Icon(
-          Icons.water_drop,
+          Icons.calculate_outlined,
           color: Colors.black,
         ),
         title: Text(
-          'Maliyet Hesaplama',
+          'Hesaplama',
           style: GoogleFonts.poppins(
               color: Colors.black, fontWeight: FontWeight.bold),
         ),
